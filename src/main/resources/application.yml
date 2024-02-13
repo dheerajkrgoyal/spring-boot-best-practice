@@ -1,0 +1,32 @@
+#DataSource Configuration
+spring:
+  datasource:
+    driver-class-name:  org.h2.Driver
+    url: jdbc:h2:mem:springbootbestpractice
+    username: sa
+    password:
+
+# JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    defer-datasource-initialization: true
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql : true
+
+  h2:
+    console:
+      enable: true
+
+server:
+  port: 9191
+
+
+# EMAIL config
+
